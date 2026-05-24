@@ -14,6 +14,22 @@ Ruta oficial de documentos maestros:
 
 ---
 
+# Rutas Locales de Assets
+
+## Alexandro — Imágenes para avatar 3D
+
+```txt
+/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Alexandro Imagenes/
+```
+
+## Grupo AXM Technology — Identidad visual
+
+```txt
+/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Grupo AXM Logo/
+```
+
+---
+
 # Índice de Documentos
 
 | Archivo | Descripción |
@@ -42,6 +58,9 @@ Ruta oficial de documentos maestros:
 ```txt
 Website GAT/
 │
+├── Documentos Maestros/
+├── Alexandro Imagenes/
+├── Grupo AXM Logo/
 ├── frontend/
 ├── backend/
 ├── docs/

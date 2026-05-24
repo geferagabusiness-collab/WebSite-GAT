@@ -72,3 +72,15 @@ Partículas dinámicas.
 - sorprender,
 - generar recordación,
 - demostrar capacidad IA.
+
+---
+
+# Ruta Local — Assets del Avatar 3D
+
+```txt
+/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Alexandro Imagenes/
+```
+
+Fuente autorizada de imágenes y referencias visuales para la construcción del avatar holográfico 3D de Alexandro.
+
+Todo desarrollo del avatar debe basarse en los assets de esta carpeta.

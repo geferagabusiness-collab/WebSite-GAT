@@ -38,6 +38,12 @@ Frontend Avatar:
 - depende de AI Service,
 - depende de Voice Service.
 
+Assets locales del avatar 3D:
+
+```txt
+/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Alexandro Imagenes/
+```
+
 ---
 
 # Branding
@@ -45,6 +51,12 @@ Frontend Avatar:
 Todos los módulos visuales:
 
 - dependen de branding centralizado.
+
+Identidad visual oficial:
+
+```txt
+/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Grupo AXM Logo/
+```
 
 ---
 
