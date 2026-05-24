@@ -1,0 +1,239 @@
+01_INICIO
+Propuesta_de_Valor.txt
+
+Impulsamos empresas con tecnología, automatización e inteligencia artificial diseñadas para optimizar operaciones, proteger activos y acelerar el crecimiento empresarial. En Grupo AXM Technology convertimos la tecnología en una ventaja competitiva real.
+Descubrir solución
+
+02_NOSOTROS
+Mision.txt
+
+Ayudamos a las empresas a evolucionar mediante soluciones tecnológicas integrales, soporte especializado e innovación estratégica orientada a resultados sostenibles y continuidad operativa.
+Saber más
+
+Vision.txt
+
+Ser una referencia en transformación tecnológica empresarial en Latinoamérica, liderando la integración de inteligencia artificial, automatización y ciberseguridad para organizaciones modernas.
+Conocer nuestra visión
+
+Equipo.txt
+
+Contamos con un equipo multidisciplinario enfocado en tecnología, infraestructura, automatización y soluciones empresariales de alto impacto. Experiencia técnica con visión estratégica.
+Hablar con un especialista
+
+03_SERVICIOS
+01_Soporte_y_Mantenimiento
+Asistencia_Tecnica_In_Situ_y_Remota.txt
+
+Brindamos soporte técnico rápido y confiable para mantener la continuidad operativa de su empresa, tanto de forma presencial como remota. Respuesta eficiente cuando más lo necesita.
+Solicitar asistencia
+
+Planes_de_Mantenimiento_Preventivo.txt
+
+Prevenimos fallas antes de que afecten su operación mediante planes de mantenimiento diseñados para maximizar estabilidad, rendimiento y vida útil tecnológica.
+Cotizar ahora
+
+Administracion_de_Parque_Tecnologico_(Equipos_y_Sistemas).txt
+
+Gestionamos integralmente los activos tecnológicos de su empresa para garantizar control, eficiencia y operación continua en todos sus sistemas y equipos.
+Solicitar asesoría
+
+Mesa_de_Ayuda_Empresarial.txt
+
+Centralice el soporte de su organización con una mesa de ayuda profesional orientada a resolver incidencias de forma ágil, organizada y escalable.
+Hablar con soporte
+
+02_Conectividad_y_Redes_Empresariales
+Instalacion_de_Redes_UTP_y_Fibra_Optica.txt
+
+Diseñamos e implementamos redes empresariales robustas, seguras y preparadas para soportar operaciones modernas de alto rendimiento y crecimiento futuro.
+Solicitar cotización
+
+WiFi_Corporativo_y_Multi-Sede.txt
+
+Conectividad inalámbrica empresarial optimizada para oficinas, sedes múltiples y entornos de alta demanda, con estabilidad y cobertura profesional.
+Descubrir solución
+
+Servidores_y_Almacenamiento_de_Datos.txt
+
+Infraestructura de servidores y almacenamiento diseñada para proteger la información crítica de su empresa y garantizar disponibilidad permanente.
+Solicitar asesoría
+
+Optimizacion_y_Continuidad_de_Internet.txt
+
+Mejoramos la estabilidad y rendimiento de su conexión empresarial para reducir interrupciones y asegurar operaciones sin pausas.
+Hablar con un especialista
+
+03_Inteligencia_Artificial_y_Automatizacion
+Agentes_IA_para_WhatsApp_y_Ventas.txt
+
+Implemente agentes inteligentes capaces de atender clientes, responder consultas y aumentar conversiones de manera automatizada y escalable.
+Descubrir solución
+
+Automatizacion_de_Procesos_y_CRM.txt
+
+Automatizamos procesos operativos y comerciales para reducir tareas repetitivas, optimizar tiempos y aumentar la productividad empresarial.
+Solicitar demostración
+
+Asistentes_Virtuales_e_Internos.txt
+
+Integre asistentes impulsados por IA para apoyar áreas internas, mejorar flujos de trabajo y potenciar la eficiencia organizacional.
+Conocer más
+
+Analisis_Inteligente_de_Datos.txt
+
+Transforme datos empresariales en decisiones estratégicas mediante inteligencia artificial, automatización analítica y visualización inteligente.
+Hablar con un especialista
+
+04_Desarrollo_de_Software_y_Plataformas
+Sitios_Web_y_Tiendas_Virtuales.txt
+
+Creamos plataformas web modernas, rápidas y orientadas a conversión para fortalecer la presencia digital y el crecimiento comercial de su empresa.
+Cotizar proyecto
+
+Aplicaciones_Moviles_y_Corporativas.txt
+
+Desarrollamos aplicaciones empresariales adaptadas a sus procesos, optimizadas para escalabilidad, rendimiento y experiencia de usuario.
+Solicitar asesoría
+
+Sistemas_de_Gestion_Personalizados.txt
+
+Diseñamos sistemas a medida para centralizar operaciones, automatizar tareas y optimizar el control estratégico de su negocio.
+Descubrir solución
+
+Integracion_de_Sistemas_y_APIs.txt
+
+Conectamos plataformas, servicios y herramientas empresariales para crear ecosistemas digitales integrados, eficientes y escalables.
+Hablar con un especialista
+
+05_Ciberseguridad_y_Proteccion_Digital
+Auditorias_y_Blindaje_de_Redes.txt
+
+Evaluamos y fortalecemos la infraestructura tecnológica de su empresa para reducir vulnerabilidades y elevar el nivel de seguridad digital.
+Solicitar auditoría
+
+Copias_de_Seguridad_y_Recuperacion.txt
+
+Proteja la información crítica de su organización con soluciones de respaldo y recuperación diseñadas para minimizar riesgos operativos.
+Proteger mi empresa
+
+Licencias_SO_Antivirus_y_Ofimatica.txt
+
+Suministramos licenciamiento tecnológico empresarial confiable para garantizar legalidad, seguridad y productividad corporativa.
+Solicitar cotización
+
+Proteccion_contra_Virus_y_Secuestro_de_Datos.txt
+
+Implementamos estrategias de protección avanzadas frente a ransomware, malware y amenazas que comprometen la continuidad empresarial.
+Blindar mi operación
+
+Monitoreo_de_Seguridad_24_7.txt
+
+Supervisión continua de infraestructura y entornos digitales para detectar amenazas oportunamente y actuar antes de que impacten su negocio.
+Hablar con expertos
+
+06_Marketing_y_Branding_Digital
+Identidad_Corporativa_y_Diseño.txt
+
+Construimos marcas tecnológicas sólidas, modernas y memorables que transmiten confianza, innovación y diferenciación empresarial.
+Potenciar mi marca
+
+Automatizacion_de_Contenidos_con_IA.txt
+
+Acelere la producción de contenido con inteligencia artificial aplicada al marketing, mejorando consistencia, velocidad y alcance comercial.
+Descubrir solución
+
+Embudos_de_Venta_y_WhatsApp_Marketing.txt
+
+Diseñamos flujos comerciales automatizados para captar clientes, nutrir oportunidades y aumentar conversiones desde WhatsApp y canales digitales.
+Impulsar ventas
+
+04_ENLACE_ALEXANDRO
+Gerente_Operativo_IA.txt
+
+Alexandro es un gerente operativo potenciado por inteligencia artificial, diseñado para optimizar procesos, automatizar operaciones y apoyar la toma de decisiones empresariales.
+Conocer Alexandro
+
+05_PRODUCTOS
+Seguridad_Electronica.txt
+
+Soluciones avanzadas en videovigilancia, control de acceso y protección electrónica para fortalecer la seguridad física y operativa de su empresa.
+Solicitar cotización
+
+06_ACADEMY
+Curso_IA_para_Empresas.txt
+
+Capacitamos empresas para integrar inteligencia artificial en sus operaciones y aprovechar su potencial estratégico de manera práctica y aplicada.
+Reservar cupo
+
+Talleres_Corporativos_IA.txt
+
+Entrenamientos especializados orientados a equipos empresariales que buscan acelerar la adopción tecnológica y la productividad con IA.
+Solicitar información
+
+IA_para_Equipos_Comerciales.txt
+
+Entrene a su equipo de ventas en herramientas de inteligencia artificial para mejorar prospectación, seguimiento y cierre comercial.
+Capacitar mi equipo
+
+IA_para_Gerencia.txt
+
+Programas ejecutivos enfocados en líderes empresariales que desean integrar IA en estrategia, productividad y toma de decisiones.
+Conocer programa
+
+Adopcion_Empresarial_IA.txt
+
+Acompañamos la implementación estratégica de inteligencia artificial en empresas para garantizar adopción efectiva y resultados medibles.
+Hablar con un consultor
+
+Consulta_de_Certificados.txt
+
+Verifique certificados emitidos por Grupo AXM Technology de manera rápida, segura y digital desde nuestra plataforma oficial.
+Consultar certificado
+
+
+07_SOPORTE
+Tickets.txt
+
+Gestione solicitudes e incidencias de soporte de forma organizada, rápida y eficiente mediante nuestra plataforma empresarial de atención.
+Crear ticket
+
+Acceder a descarga
+AnyDesk.txt
+
+Acceda a soporte remoto seguro y ágil mediante AnyDesk para resolver incidencias técnicas sin interrumpir sus operaciones.
+Descargar ahora
+
+RustDesk.txt
+
+Herramienta de asistencia remota enfocada en control seguro, estabilidad y soporte técnico empresarial eficiente.
+Descargar utilidad
+
+TeamViewer.txt
+
+Conectividad remota confiable para soporte técnico empresarial inmediato y continuidad operativa sin desplazamientos innecesarios.
+
+Utilidades.txt
+
+Acceda a herramientas y recursos complementarios diseñados para optimizar soporte, diagnóstico y mantenimiento tecnológico empresarial.
+Explorar recursos
+
+Base_de_Conocimiento.txt
+
+Encuentre guías, soluciones y recursos técnicos para resolver dudas frecuentes y optimizar el uso de sus plataformas tecnológicas.
+Consultar base
+
+08_CONTACTO
+Formulario.txt
+
+Conéctese con nuestro equipo para recibir asesoría especializada y soluciones tecnológicas adaptadas a las necesidades de su empresa.
+Contactar ahora
+
+WhatsApp.txt
+
+Hable directamente con un especialista de Grupo AXM Technology y reciba atención rápida para proyectos, soporte o asesoría tecnológica.
+Escribir por WhatsApp
+
+Redes_Sociales.txt
+
+Descubra novedades, contenido tecnológico y soluciones empresariales a través de nuestras redes oficiales y comunidad digital.
+Seguirnos en redes
