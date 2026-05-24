@@ -1,5 +1,6 @@
 'use client'
 
+import { ALEXANDRO_OPEN_EVENT } from '@/lib/alexandro'
 import { useState, useEffect, useRef } from 'react'
 
 function timestamp() {
@@ -125,6 +126,15 @@ export function AlexandroWidget() {
       }, 900 + Math.random() * 500)
     }, 50)
   }
+
+  // Abrir desde otras páginas (p. ej. /alexandro)
+  useEffect(() => {
+    function onOpenRequest() {
+      open()
+    }
+    window.addEventListener(ALEXANDRO_OPEN_EVENT, onOpenRequest)
+    return () => window.removeEventListener(ALEXANDRO_OPEN_EVENT, onOpenRequest)
+  }, [])
 
   // Cerrar con Escape
   useEffect(() => {

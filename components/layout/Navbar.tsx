@@ -1,12 +1,12 @@
 'use client'
 
-import { LogoDark } from '@/components/brand/LogoDark'
 import { getButtonClassName } from '@/components/ui/Button'
 import { NAV_LINKS } from '@/lib/constants'
 import { mobileMenuVariants } from '@/lib/motion'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
@@ -40,9 +40,16 @@ export function Navbar() {
         isScrolled && 'shadow-card',
       )}
     >
-      <div className="mx-auto flex h-16 max-w-container items-center justify-between px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-container items-center justify-between px-6 md:h-24 lg:px-8">
         <Link href="/" className="flex items-center" onClick={closeMobile}>
-          <LogoDark />
+          <Image
+            src="/logo/logo-color.png"
+            alt="Grupo AXM Technology"
+            width={225}
+            height={65}
+            className="h-14 w-auto md:h-16"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Principal">
@@ -50,7 +57,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-medium text-axm-white/80 transition-colors duration-300 hover:text-axm-cyan"
+              className="text-base font-medium text-axm-white/80 transition-colors duration-300 hover:text-axm-cyan"
             >
               {link.label}
             </Link>
@@ -59,7 +66,7 @@ export function Navbar() {
 
         <Link
           href="/contacto"
-          className={getButtonClassName('primary', 'sm', 'hidden lg:inline-flex')}
+          className={getButtonClassName('primary', 'md', 'hidden lg:inline-flex')}
         >
           Contactar
         </Link>
@@ -91,7 +98,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMobile}
-                  className="rounded-lg px-3 py-3 font-medium text-axm-white/80 transition-colors hover:bg-white/5 hover:text-axm-cyan"
+                  className="rounded-lg px-3 py-3 text-base font-medium text-axm-white/80 transition-colors hover:bg-white/5 hover:text-axm-cyan"
                 >
                   {link.label}
                 </Link>
@@ -99,7 +106,7 @@ export function Navbar() {
               <Link
                 href="/contacto"
                 onClick={closeMobile}
-                className={getButtonClassName('primary', 'sm', 'mt-2 w-full')}
+                className={getButtonClassName('primary', 'md', 'mt-2 w-full')}
               >
                 Contactar
               </Link>

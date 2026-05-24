@@ -15,7 +15,7 @@ export function PageWrapper({ children, className }: PageWrapperProps) {
     <motion.main
       initial={fadeIn.initial}
       animate={fadeIn.animate}
-      className={cn('min-h-screen pt-16', className)}
+      className={cn('min-h-screen pt-20 md:pt-24', className)}
     >
       {children}
     </motion.main>
