@@ -8,7 +8,7 @@ export interface GlassCardProps extends HTMLAttributes<HTMLDivElement> {
 export function GlassCard({ className, hover = true, children, ...props }: GlassCardProps) {
   return (
     <div
-      className={cn('glass-card p-6', hover && 'glass-card-hover', className)}
+      className={cn('glass-card p-4 sm:p-6', hover && 'glass-card-hover', className)}
       {...props}
     >
       {children}

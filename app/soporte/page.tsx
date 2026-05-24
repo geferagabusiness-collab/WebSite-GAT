@@ -28,8 +28,8 @@ export default function SoportePage() {
       <PageBackground variant="soporte" />
       <div className="relative z-10">
       <section className="section-padding">
-        <div className="mx-auto max-w-container px-6 lg:px-8">
-          <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-16">
+        <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+          <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-10 sm:mb-16">
             <SectionTitle
               title={SOPORTE_CONTENT.title}
               subtitle={SOPORTE_CONTENT.subtitle}
@@ -45,7 +45,7 @@ export default function SoportePage() {
             variants={fadeInUpVariants}
           >
             <GlassCard className="mx-auto max-w-3xl">
-              <h3 className="font-display text-display-md font-semibold text-axm-white">Tickets</h3>
+              <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">Tickets</h3>
               <p className="mt-3 text-body-md text-axm-gray">{SOPORTE_CONTENT.ticket.intro}</p>
               <form className="mt-8 grid gap-4 sm:grid-cols-2" onSubmit={handleTicketSubmit}>
                 <div className="sm:col-span-2 sm:grid sm:grid-cols-2 sm:gap-4">
@@ -116,7 +116,7 @@ export default function SoportePage() {
       </section>
 
       <section className="section-padding border-t border-white/6 bg-axm-navy/40">
-        <div className="mx-auto max-w-container px-6 lg:px-8">
+        <motion.div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -124,7 +124,7 @@ export default function SoportePage() {
             variants={fadeInUpVariants}
             className="mb-12 text-center"
           >
-            <h2 className="font-display text-display-lg font-bold text-axm-white">
+            <h2 className="font-display text-2xl font-bold text-axm-white sm:text-3xl md:text-display-lg">
               {SOPORTE_CONTENT.downloads.title}
             </h2>
             <p className="mt-3 text-body-lg text-axm-gray">{SOPORTE_CONTENT.downloads.subtitle}</p>
@@ -135,12 +135,12 @@ export default function SoportePage() {
             whileInView="animate"
             viewport={{ once: true, margin: '-60px' }}
             variants={staggerContainer}
-            className="grid gap-6 md:grid-cols-3"
+            className="grid gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3"
           >
             {SOPORTE_CONTENT.downloads.items.map((tool) => (
               <motion.div key={tool.name} variants={fadeInUpVariants}>
                 <GlassCard className="flex h-full flex-col">
-                  <h3 className="font-display text-display-md font-semibold text-axm-white">
+                  <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">
                     {tool.name}
                   </h3>
                   <p className="mt-3 flex-1 text-body-md text-axm-gray">{tool.description}</p>
@@ -157,7 +157,7 @@ export default function SoportePage() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </section>
       </div>
     </div>

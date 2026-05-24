@@ -146,7 +146,7 @@ export function HypercubeBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0 opacity-50"
+      className="pointer-events-none fixed inset-0 z-0 opacity-30 sm:opacity-50"
       aria-hidden
     />
   )

@@ -13,15 +13,15 @@ const NOISE_TEXTURE = `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmln
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[calc(100dvh-4rem)] items-center overflow-hidden bg-gradient-hero">
+    <section className="relative flex min-h-[calc(100dvh-4.5rem)] items-center overflow-hidden bg-gradient-hero sm:min-h-[calc(100dvh-5rem)] md:min-h-[calc(100dvh-6rem)]">
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
         <motion.div
-          className="absolute top-[-10%] left-[60%] h-96 w-96 rounded-full bg-axm-blue/20 blur-[120px]"
+          className="absolute top-[-10%] left-[60%] h-48 w-48 rounded-full bg-axm-blue/20 blur-[80px] sm:h-72 sm:w-72 sm:blur-[100px] md:h-96 md:w-96 md:blur-[120px]"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-          className="absolute top-[30%] right-[5%] h-72 w-72 rounded-full bg-axm-cyan/15 blur-[120px]"
+          className="absolute top-[30%] right-[5%] h-40 w-40 rounded-full bg-axm-cyan/15 blur-[80px] sm:h-56 sm:w-56 sm:blur-[100px] md:h-72 md:w-72 md:blur-[120px]"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
         />
@@ -61,8 +61,8 @@ export function HeroSection() {
         <HeroParticles />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-container px-6 py-8 sm:py-10 lg:grid lg:grid-cols-5 lg:items-center lg:gap-8 lg:px-8">
-        <motion.div className="flex flex-col items-center space-y-6 text-center lg:col-span-3 lg:max-w-2xl lg:items-start lg:text-left">
+      <div className="relative z-10 mx-auto w-full max-w-container px-4 py-6 sm:px-6 sm:py-10 lg:grid lg:grid-cols-5 lg:items-center lg:gap-8 lg:px-8">
+        <motion.div className="flex flex-col items-center space-y-5 text-center sm:space-y-6 lg:col-span-3 lg:max-w-2xl lg:items-start lg:text-left">
           <motion.span
             initial={fadeInUp.initial}
             animate={fadeInUp.animate}
@@ -76,7 +76,7 @@ export function HeroSection() {
             initial={blurReveal.initial}
             animate={blurReveal.animate}
             transition={{ ...blurReveal.animate.transition, delay: 0.4 }}
-            className="font-display text-4xl font-bold leading-tight tracking-[-0.02em] text-axm-white md:text-5xl lg:text-6xl"
+            className="font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-axm-white sm:text-4xl md:text-5xl lg:text-6xl"
           >
             {HOME_HERO.headlineBefore}
             <GradientText as="span">{HOME_HERO.headlineHighlight}</GradientText>
@@ -87,7 +87,7 @@ export function HeroSection() {
             initial={fadeInUp.initial}
             animate={fadeInUp.animate}
             transition={{ ...fadeInUp.animate.transition, delay: 0.6 }}
-            className="text-lg text-axm-white/80 md:text-xl"
+            className="text-base text-axm-white/80 sm:text-lg md:text-xl"
           >
             {HOME_HERO.lead}
           </motion.p>
@@ -96,17 +96,17 @@ export function HeroSection() {
             initial={fadeInUp.initial}
             animate={fadeInUp.animate}
             transition={{ ...fadeInUp.animate.transition, delay: 0.8 }}
-            className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start"
+            className="flex w-full max-w-sm flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4 lg:items-start"
           >
             <Link
               href={HOME_HERO.ctaPrimary.href}
-              className={getButtonClassName('primary', 'lg')}
+              className={getButtonClassName('primary', 'lg', 'w-full sm:w-auto')}
             >
               {HOME_HERO.ctaPrimary.label}
             </Link>
             <Link
               href={HOME_HERO.ctaSecondary.href}
-              className={getButtonClassName('secondary', 'lg')}
+              className={getButtonClassName('secondary', 'lg', 'w-full sm:w-auto')}
             >
               {HOME_HERO.ctaSecondary.label}
             </Link>

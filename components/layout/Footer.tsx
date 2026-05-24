@@ -15,8 +15,8 @@ export function Footer() {
 
   return (
     <footer className="border-t border-white/6 bg-axm-navy">
-      <div className="mx-auto max-w-container px-6 py-16 lg:px-8 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
+      <div className="mx-auto max-w-container px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="grid gap-10 sm:gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div className="space-y-6">
             <Link href="/" className="inline-flex">
               <LogoDark className="[&>svg]:h-10" />
@@ -44,7 +44,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid gap-10 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
             {FOOTER_COLUMNS.map((column) => (
               <div key={column.title}>
                 <h3 className="font-display text-body-lg font-semibold text-axm-white">

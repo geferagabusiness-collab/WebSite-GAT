@@ -1,5 +1,6 @@
 'use client'
 
+import { getResponsiveCount } from '@/lib/responsive'
 import { useEffect, useRef } from 'react'
 
 interface Particle {
@@ -12,7 +13,7 @@ interface Particle {
 }
 
 const COLORS = ['#0075F0', '#00F0FC']
-const PARTICLE_COUNT = 70
+const PARTICLE_COUNT_DESKTOP = 70
 const CONNECTION_DISTANCE = 140
 const LINE_OPACITY = 0.15
 
@@ -36,7 +37,7 @@ export function HeroParticles() {
       canvas.width = parent.clientWidth
       canvas.height = parent.clientHeight
 
-      particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+      particles = Array.from({ length: getResponsiveCount(PARTICLE_COUNT_DESKTOP, 42, 24) }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.8 + (Math.random() > 0.5 ? 0.3 : -0.3),

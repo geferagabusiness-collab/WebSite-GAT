@@ -29,12 +29,12 @@ const serviceIcons: Record<ServiceIconName, LucideIcon> = {
 export function ServicesGrid() {
   return (
     <section className="section-padding bg-axm-deep">
-      <div className="mx-auto max-w-container px-6 lg:px-8">
+      <motion.div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title={HOME_SERVICES_SECTION.title}
           subtitle={HOME_SERVICES_SECTION.subtitle}
           align="center"
-          className="mx-auto mb-16"
+          className="mx-auto mb-10 sm:mb-16"
         />
 
         <motion.div
@@ -42,7 +42,7 @@ export function ServicesGrid() {
           whileInView="animate"
           viewport={{ once: true, margin: '-80px' }}
           variants={staggerContainer}
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           {SERVICES.map((service) => {
             const Icon = serviceIcons[service.icon]
@@ -51,7 +51,7 @@ export function ServicesGrid() {
               <motion.div key={service.id} variants={fadeInUpVariants}>
                 <GlassCard className="flex h-full flex-col">
                   <Icon size={32} style={{ color: service.color }} />
-                  <h3 className="mt-5 font-display text-display-md font-semibold text-axm-white">
+                  <h3 className="mt-5 font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">
                     {service.title}
                   </h3>
                   <p className="mt-3 flex-1 text-body-md text-axm-gray">{service.description}</p>
@@ -67,7 +67,7 @@ export function ServicesGrid() {
             )
           })}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   )
 }

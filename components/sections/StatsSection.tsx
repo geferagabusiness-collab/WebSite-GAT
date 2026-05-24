@@ -49,8 +49,8 @@ export function StatsSection() {
         aria-hidden
       />
 
-      <div className="mx-auto max-w-container px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
           {HOME_STATS.map((stat, index) => {
             const Icon = STAT_ICONS[index]
             const { value, suffix } = STAT_TARGETS[index]
@@ -67,7 +67,7 @@ export function StatsSection() {
                 />
                 <GradientText
                   as="p"
-                  className="bg-gradient-to-br from-axm-blue to-axm-cyan font-display text-display-lg font-bold"
+                  className="bg-gradient-to-br from-axm-blue to-axm-cyan font-display text-3xl font-bold sm:text-display-md md:text-display-lg"
                 >
                   <AnimatedStatValue target={value} suffix={suffix} />
                 </GradientText>

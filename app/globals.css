@@ -4,11 +4,11 @@
 
 @layer base {
   html {
-    @apply scroll-smooth antialiased;
+    @apply scroll-smooth antialiased overflow-x-hidden;
   }
 
   body {
-    @apply bg-axm-deep text-axm-white font-sans;
+    @apply bg-axm-deep text-axm-white font-sans overflow-x-hidden;
   }
 
   ::selection {
@@ -51,11 +51,11 @@
 
 @layer utilities {
   .section-padding {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-16 sm:py-20 md:py-32 lg:py-40;
   }
 
   .section-gap {
-    @apply space-y-32 md:space-y-40;
+    @apply space-y-20 sm:space-y-28 md:space-y-40;
   }
 }
 
@@ -499,19 +499,113 @@
 .axm-send-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(47,122,247,0.55); }
 .axm-send-btn:active { transform: scale(.96); }
 
-/* Mobile */
+/* FAB — safe area + smaller on mobile */
+.axm-fab {
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom, 16px));
+  right: max(16px, env(safe-area-inset-right, 16px));
+  z-index: 60;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+}
+.axm-fab-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--axm-bg-1);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(120,170,230,0.4), 0 8px 30px rgba(47,122,247,0.4), 0 0 40px rgba(92,196,255,0.35);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.axm-fab-inner:hover { transform: scale(1.05); }
+.axm-fab-avatar {
+  position: absolute;
+  inset: -4%;
+  background-image: url('/alexandro/alexandro-icon.png');
+  background-position: center 28%;
+  background-size: 130%;
+}
+.axm-fab-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--axm-glass-strong);
+  border: 1px solid rgba(120,170,230,0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--axm-ink);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 9px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 0.01em;
+}
+
+/* Tablet + mobile */
 @media (max-width: 900px) {
+  .axm-backdrop {
+    background: linear-gradient(
+      to bottom,
+      rgba(2, 6, 14, 0.08) 0%,
+      rgba(2, 6, 14, 0.2) 40%,
+      rgba(2, 6, 14, 0.45) 100%
+    );
+  }
   .axm-panel {
-    left: 16px; right: 16px;
-    bottom: 16px;
+    left: 12px;
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom, 12px));
     width: auto;
-    max-height: 56vh;
+    max-height: 52vh;
+    border-radius: 16px;
   }
   .axm-avatar-wrap {
-    right: 0; left: 0;
+    right: 0;
+    left: 0;
     width: 100%;
-    height: 55vh;
-    top: 0; bottom: auto;
+    height: 42vh;
+    top: 0;
+    bottom: auto;
   }
+  .axm-avatar {
+    bottom: -4%;
+    max-width: 320px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+  .axm-floor { opacity: 0.4; width: 100%; right: 0; height: 120px; bottom: -60px; }
   .axm-hud { display: none; }
+  .axm-fab-tooltip { display: none; }
+  .axm-messages { min-height: 120px; padding: 14px 14px 6px; }
+  .axm-panel-head { padding: 12px 14px; }
+  .axm-chips { padding: 0 14px 6px; gap: 6px; }
+  .axm-chip { font-size: 10px; padding: 6px 10px; }
+  .axm-input-row { padding: 10px 12px max(12px, env(safe-area-inset-bottom, 12px)); }
+}
+
+@media (max-width: 480px) {
+  .axm-fab {
+    width: 56px;
+    height: 56px;
+    bottom: max(12px, env(safe-area-inset-bottom, 12px));
+    right: max(12px, env(safe-area-inset-right, 12px));
+  }
+  .axm-panel {
+    left: 8px;
+    right: 8px;
+    max-height: 58vh;
+    border-radius: 14px;
+  }
+  .axm-avatar-wrap { height: 38vh; }
+  .axm-msg { font-size: 13px; padding: 10px 12px; }
 }

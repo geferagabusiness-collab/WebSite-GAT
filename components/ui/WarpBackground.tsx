@@ -1,8 +1,9 @@
 'use client'
 
+import { getResponsiveCount } from '@/lib/responsive'
 import { useEffect, useRef } from 'react'
 
-const LINE_COUNT = 60
+const LINE_COUNT_DESKTOP = 60
 interface WarpLine {
   angle: number
   length: number
@@ -56,8 +57,9 @@ export function WarpBackground() {
       canvas.height = window.innerHeight
       cx = canvas.width / 2
       cy = canvas.height / 2
-      lines = Array.from({ length: LINE_COUNT }, (_, i) =>
-        createLine(cx, cy, canvas.width, canvas.height, (Math.PI * 2 * i) / LINE_COUNT),
+      const lineCount = getResponsiveCount(LINE_COUNT_DESKTOP, 36, 20)
+      lines = Array.from({ length: lineCount }, (_, i) =>
+        createLine(cx, cy, canvas.width, canvas.height, (Math.PI * 2 * i) / lineCount),
       )
     }
 
@@ -114,7 +116,7 @@ export function WarpBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0"
+      className="pointer-events-none fixed inset-0 z-0 opacity-70 sm:opacity-100"
       aria-hidden
     />
   )

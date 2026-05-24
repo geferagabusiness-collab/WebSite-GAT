@@ -1,6 +1,7 @@
 'use client'
 
 import { EASINGS } from '@/lib/motion'
+import { getResponsiveCount } from '@/lib/responsive'
 import { motion } from 'framer-motion'
 import { useEffect, useRef, type ReactNode } from 'react'
 
@@ -60,7 +61,7 @@ function BackgroundParticles({
       canvas.width = parent.clientWidth
       canvas.height = parent.clientHeight
 
-      particles = Array.from({ length: count }, () => ({
+      particles = Array.from({ length: getResponsiveCount(count, Math.floor(count * 0.6), Math.floor(count * 0.35)) }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: ((Math.random() - 0.5) * 0.8 + (Math.random() > 0.5 ? 0.3 : -0.3)) * speedMultiplier,

@@ -40,14 +40,14 @@ export function Navbar() {
         isScrolled && 'shadow-card',
       )}
     >
-      <div className="mx-auto flex h-20 max-w-container items-center justify-between px-6 md:h-24 lg:px-8">
-        <Link href="/" className="flex items-center" onClick={closeMobile}>
+      <div className="mx-auto flex h-[4.5rem] max-w-container items-center justify-between px-4 sm:h-20 sm:px-6 md:h-24 lg:px-8">
+        <Link href="/" className="flex shrink-0 items-center" onClick={closeMobile}>
           <Image
             src="/logo/logo-color.png"
             alt="Grupo AXM Technology"
             width={225}
             height={65}
-            className="h-14 w-auto md:h-16"
+            className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
             priority
           />
         </Link>
@@ -92,7 +92,7 @@ export function Navbar() {
             variants={mobileMenuVariants}
             className="overflow-hidden border-t border-white/6 lg:hidden"
           >
-            <nav className="flex flex-col gap-1 px-6 py-4" aria-label="Mobile">
+            <nav className="flex flex-col gap-1 px-4 py-4 sm:px-6" aria-label="Mobile">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}

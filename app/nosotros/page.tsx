@@ -16,12 +16,12 @@ export default function NosotrosPage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(0,117,240,0.18)_0%,transparent_65%)]" />
 
       <section className="relative z-10 section-padding">
-        <div className="mx-auto max-w-container px-6 lg:px-8">
+        <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="initial"
             animate="animate"
             variants={fadeInUpVariants}
-            className="mb-16"
+            className="mb-10 sm:mb-16"
           >
             <SectionTitle
               title={NOSOTROS_CONTENT.title}
@@ -36,12 +36,12 @@ export default function NosotrosPage() {
             whileInView="animate"
             viewport={{ once: true, margin: '-60px' }}
             variants={staggerContainer}
-            className="grid gap-8 lg:grid-cols-3"
+            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
           >
             {NOSOTROS_CONTENT.sections.map((section) => (
               <motion.div key={section.id} variants={fadeInUpVariants}>
                 <TiltCard className="flex h-full flex-col">
-                  <GradientText as="h3" className="font-display text-display-md font-semibold">
+                  <GradientText as="h3" className="font-display text-xl font-semibold sm:text-2xl md:text-display-md">
                     {section.title}
                   </GradientText>
                   <p className="mt-4 flex-1 text-body-md text-axm-gray">{section.body}</p>

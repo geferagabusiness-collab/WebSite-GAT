@@ -1,8 +1,9 @@
 'use client'
 
+import { getResponsiveCount } from '@/lib/responsive'
 import { useEffect, useRef } from 'react'
 
-const PARTICLE_COUNT = 80
+const PARTICLE_COUNT_DESKTOP = 80
 const TRAIL_MIN = 5
 const TRAIL_MAX = 8
 const COLOR_SETS = [
@@ -53,7 +54,7 @@ export function VortexBackground() {
       cy = canvas.height / 2
       maxRadius = Math.min(cx, cy) * 0.92
       if (particles.length === 0) {
-        particles = Array.from({ length: PARTICLE_COUNT }, () => createParticle())
+        particles = Array.from({ length: getResponsiveCount(PARTICLE_COUNT_DESKTOP, 48, 28) }, () => createParticle())
       }
     }
 
@@ -113,7 +114,7 @@ export function VortexBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0 opacity-[0.35]"
+      className="pointer-events-none fixed inset-0 z-0 opacity-25 sm:opacity-[0.35]"
       aria-hidden
     />
   )

@@ -1,6 +1,7 @@
 'use client'
 
 import { ALEXANDRO_OPEN_EVENT } from '@/lib/alexandro'
+import { getResponsiveCount } from '@/lib/responsive'
 import { useState, useEffect, useRef } from 'react'
 
 function timestamp() {
@@ -47,7 +48,7 @@ export function AlexandroWidget() {
 
   // Spawnear partículas al montar
   useEffect(() => {
-    spawnParticles(18)
+    spawnParticles(getResponsiveCount(18, 12, 8))
   }, [])
 
   // Scroll al último mensaje
@@ -153,61 +154,14 @@ export function AlexandroWidget() {
           className="axm-fab"
           onClick={open}
           aria-label="Hablar con Alexandro"
-          style={{
-            position: 'fixed',
-            bottom: '24px',
-            right: '24px',
-            zIndex: 60,
-            width: '68px',
-            height: '68px',
-            borderRadius: '50%',
-            border: 'none',
-            cursor: 'pointer',
-            background: 'transparent',
-            padding: 0,
-          }}
         >
           <div className="axm-fab-rotate" />
-          <div style={{
-            position: 'relative',
-            width: '100%',
-            height: '100%',
-            borderRadius: '50%',
-            background: 'var(--axm-bg-1)',
-            overflow: 'hidden',
-            boxShadow: '0 0 0 1px rgba(120,170,230,0.4), 0 8px 30px rgba(47,122,247,0.4), 0 0 40px rgba(92,196,255,0.35)',
-            transition: 'transform .25s ease, box-shadow .25s ease',
-          }}>
-            <div style={{
-              position: 'absolute',
-              inset: '-4%',
-              backgroundImage: "url('/alexandro/alexandro-icon.png')",
-              backgroundPosition: 'center 28%',
-              backgroundSize: '130%',
-            }} />
+          <div className="axm-fab-inner">
+            <div className="axm-fab-avatar" />
           </div>
           <span className="axm-fab-ring-pulse" />
           <span className="axm-fab-ring-pulse delay" />
-          {/* Tooltip */}
-          <span style={{
-            position: 'absolute',
-            right: '84px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            background: 'var(--axm-glass-strong)',
-            border: '1px solid rgba(120,170,230,0.22)',
-            backdropFilter: 'blur(12px)',
-            color: 'var(--axm-ink)',
-            fontSize: '12px',
-            fontWeight: 500,
-            padding: '9px 14px',
-            borderRadius: '10px',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-            letterSpacing: '0.01em',
-          }}>
-            Hablar con Alexandro
-          </span>
+          <span className="axm-fab-tooltip">Hablar con Alexandro</span>
         </button>
       )}
 

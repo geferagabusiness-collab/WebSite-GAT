@@ -23,9 +23,9 @@ export function SectionTitle({
       )}
       {...props}
     >
-      <h2 className="font-display text-display-lg font-bold text-axm-white">{title}</h2>
+      <h2 className="font-display text-3xl font-bold text-axm-white sm:text-4xl md:text-display-lg">{title}</h2>
       {subtitle ? (
-        <p className="mt-4 text-body-lg text-axm-gray">{subtitle}</p>
+        <p className="mt-3 text-body-md text-axm-gray sm:mt-4 sm:text-body-lg">{subtitle}</p>
       ) : null}
     </div>
   )

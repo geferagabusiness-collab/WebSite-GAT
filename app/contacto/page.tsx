@@ -35,8 +35,8 @@ export default function ContactoPage() {
       <HypercubeBackground />
       <PageBackground variant="contacto" />
       <section className="relative z-10 section-padding">
-      <div className="mx-auto max-w-container px-6 lg:px-8">
-        <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-16">
+      <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+        <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-10 sm:mb-16">
           <SectionTitle
             title={CONTACTO_CONTENT.title}
             subtitle={CONTACTO_CONTENT.subtitle}
@@ -50,11 +50,11 @@ export default function ContactoPage() {
           whileInView="animate"
           viewport={{ once: true, margin: '-60px' }}
           variants={staggerContainer}
-          className="grid gap-8 lg:grid-cols-3"
+          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
         >
           <motion.div variants={fadeInUpVariants}>
             <GlassCard className="h-full">
-              <h3 className="font-display text-display-md font-semibold text-axm-white">Formulario</h3>
+              <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">Formulario</h3>
               <p className="mt-3 text-body-md text-axm-gray">{CONTACTO_CONTENT.form.intro}</p>
               <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                 <div>
@@ -90,7 +90,7 @@ export default function ContactoPage() {
 
           <motion.div variants={fadeInUpVariants}>
             <GlassCard className="flex h-full flex-col">
-              <h3 className="font-display text-display-md font-semibold text-axm-white">WhatsApp</h3>
+              <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">WhatsApp</h3>
               <p className="mt-3 flex-1 text-body-md text-axm-gray">{CONTACTO_CONTENT.whatsapp.intro}</p>
               <a
                 href={CONTACTO_CONTENT.whatsapp.href}
@@ -106,7 +106,7 @@ export default function ContactoPage() {
 
           <motion.div variants={fadeInUpVariants}>
             <GlassCard className="flex h-full flex-col">
-              <h3 className="font-display text-display-md font-semibold text-axm-white">
+              <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">
                 Redes sociales
               </h3>
               <p className="mt-3 flex-1 text-body-md text-axm-gray">{CONTACTO_CONTENT.social.intro}</p>

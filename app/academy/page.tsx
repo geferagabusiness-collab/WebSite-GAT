@@ -32,8 +32,8 @@ export default function AcademyPage() {
       <PageBackground variant="academy" />
       <div className="relative z-10">
       <section className="section-padding">
-        <div className="mx-auto max-w-container px-6 lg:px-8">
-          <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-16">
+        <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+          <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-10 sm:mb-16">
             <SectionTitle
               title={ACADEMY_CONTENT.title}
               subtitle={ACADEMY_CONTENT.subtitle}
@@ -47,12 +47,12 @@ export default function AcademyPage() {
             whileInView="animate"
             viewport={{ once: true, margin: '-60px' }}
             variants={staggerContainer}
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
             {ACADEMY_CONTENT.courses.map((course) => (
               <motion.div key={course.title} variants={fadeInUpVariants}>
                 <GlassCard className="flex h-full flex-col">
-                  <h3 className="font-display text-display-md font-semibold text-axm-white">
+                  <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">
                     {course.title}
                   </h3>
                   <p className="mt-3 flex-1 text-body-md text-axm-gray">{course.description}</p>
@@ -67,7 +67,7 @@ export default function AcademyPage() {
       </section>
 
       <section className="section-padding border-t border-white/6">
-        <div className="mx-auto max-w-narrow px-6 lg:px-8">
+        <div className="mx-auto max-w-narrow px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -75,7 +75,7 @@ export default function AcademyPage() {
             variants={fadeInUpVariants}
           >
             <GlassCard>
-              <GradientText as="h2" className="font-display text-display-md font-bold">
+              <GradientText as="h2" className="font-display text-xl font-bold sm:text-2xl md:text-display-md">
                 {ACADEMY_CONTENT.certificates.title}
               </GradientText>
               <p className="mt-3 text-body-md text-axm-gray">
@@ -94,7 +94,7 @@ export default function AcademyPage() {
                   type="button"
                   variant="primary"
                   size="md"
-                  className="shrink-0"
+                  className="w-full shrink-0 sm:w-auto"
                   onClick={handleConsult}
                 >
                   {ACADEMY_CONTENT.certificates.cta}
