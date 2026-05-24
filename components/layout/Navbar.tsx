@@ -43,10 +43,10 @@ export function Navbar() {
       <div className="mx-auto flex h-[4.5rem] max-w-container items-center justify-between px-4 sm:h-20 sm:px-6 md:h-24 lg:px-8">
         <Link href="/" className="flex shrink-0 items-center" onClick={closeMobile}>
           <Image
-            src="/logo/logo-color.png"
+            src="/logo/logo-nav.png"
             alt="Grupo AXM Technology"
-            width={225}
-            height={65}
+            width={160}
+            height={44}
             className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
             priority
           />

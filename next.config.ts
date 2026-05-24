@@ -1,6 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  output: undefined,
+  images: {
+    unoptimized: false,
+  },
   // NAS / SMB: el file watcher nativo falla (ENOSPC); polling evita caché .next corrupto y 404 en /
   webpack: (config, { dev }) => {
     if (dev) {
