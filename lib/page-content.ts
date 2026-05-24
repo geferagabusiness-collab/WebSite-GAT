@@ -331,6 +331,34 @@ export const ACADEMY_CONTENT = {
   },
 } as const
 
+export const PRODUCTOS_CONTENT = {
+  title: 'Productos',
+  subtitle: 'Soluciones de seguridad física y operativa para su empresa',
+  product: {
+    title: 'Seguridad Electrónica',
+    description:
+      'Soluciones avanzadas en videovigilancia, control de acceso y protección electrónica para fortalecer la seguridad física y operativa de su empresa.',
+    cta: 'Solicitar cotización',
+  },
+  features: [
+    {
+      title: 'Videovigilancia',
+      description:
+        'Monitoreo inteligente con cámaras IP, grabación y análisis para proteger instalaciones, activos y personal en tiempo real.',
+    },
+    {
+      title: 'Control de acceso',
+      description:
+        'Gestión segura de entradas, credenciales y permisos para regular el acceso a áreas críticas y fortalecer el control operativo.',
+    },
+    {
+      title: 'Protección electrónica',
+      description:
+        'Sistemas de alarma, sensores y detección perimetral que alertan ante intrusiones y refuerzan la seguridad física de su empresa.',
+    },
+  ],
+} as const
+
 export const ALEXANDRO_PAGE_CONTENT = {
   title: 'Alexandro',
   badge: 'Gerente Operativo IA',

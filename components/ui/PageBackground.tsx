@@ -9,6 +9,7 @@ export type BgVariant =
   | 'nosotros'
   | 'servicios'
   | 'alexandro'
+  | 'productos'
   | 'academy'
   | 'soporte'
   | 'contacto'
@@ -241,6 +242,35 @@ function NosotrosBackground() {
   )
 }
 
+function ProductosPerspectiveGrid() {
+  return (
+    <div
+      className="pointer-events-none absolute inset-0"
+      style={{
+        backgroundImage:
+          'linear-gradient(rgba(245,166,35,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(245,166,35,0.08) 1px, transparent 1px)',
+        backgroundSize: '80px 80px',
+        WebkitMaskImage: GRID_MASK,
+        maskImage: GRID_MASK,
+      }}
+      aria-hidden
+    />
+  )
+}
+
+function ProductosBackground() {
+  return (
+    <>
+      <ProductosPerspectiveGrid />
+      <GlowOrb className="top-[-5%] right-[-5%] h-80 w-80 bg-[#F5A623]/25 blur-[100px]" />
+      <GlowOrb
+        className="bottom-[-5%] left-[-5%] h-72 w-72 bg-[#F5A623]/15 blur-[100px]"
+        delay={1.2}
+      />
+    </>
+  )
+}
+
 function ServiciosBackground() {
   return (
     <>
@@ -331,6 +361,7 @@ const VARIANT_MAP: Record<BgVariant, () => ReactNode> = {
   nosotros: NosotrosBackground,
   servicios: ServiciosBackground,
   alexandro: AlexandroBackground,
+  productos: ProductosBackground,
   academy: AcademyBackground,
   soporte: SoporteBackground,
   contacto: ContactoBackground,
