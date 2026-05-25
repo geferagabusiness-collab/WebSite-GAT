@@ -1,5 +1,6 @@
 'use client'
 
+import { BorderBeam } from '@/components/ui/BorderBeam'
 import { CircuitBackground } from '@/components/ui/CircuitBackground'
 import { PageBackground } from '@/components/ui/PageBackground'
 import { SectionTitle } from '@/components/ui/SectionTitle'
@@ -7,8 +8,11 @@ import { ServiceCardReveal } from '@/components/ui/ServiceCardReveal'
 import { fadeInUpVariants } from '@/lib/motion'
 import { SERVICIOS_PAGE_CONTENT } from '@/lib/page-content'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 export default function ServiciosPage() {
+  const [hoveredSub, setHoveredSub] = useState<string | null>(null)
+
   return (
     <div className="relative min-h-screen bg-axm-deep overflow-hidden">
       <CircuitBackground />
@@ -40,8 +44,11 @@ export default function ServiciosPage() {
                   {service.subservices.map((sub) => (
                     <li
                       key={sub.title}
-                      className="group relative overflow-hidden rounded-xl border border-white/8 bg-gradient-to-br from-white/[0.04] to-transparent p-5 transition-all duration-300 hover:border-axm-blue/25 hover:from-axm-blue/[0.06]"
+                      className="group relative overflow-hidden rounded-xl border border-white/8 bg-gradient-to-br from-white/[0.04] to-transparent p-5 transition-all duration-300 hover:border-transparent"
+                      onMouseEnter={() => setHoveredSub(sub.title)}
+                      onMouseLeave={() => setHoveredSub(null)}
                     >
+                      {hoveredSub === sub.title && <BorderBeam />}
                       <div
                         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         style={{ backgroundImage: `linear-gradient(to right, transparent, ${service.color}, transparent)` }}
