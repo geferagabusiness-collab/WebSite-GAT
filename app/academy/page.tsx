@@ -47,19 +47,30 @@ export default function AcademyPage() {
             whileInView="animate"
             viewport={{ once: true, margin: '-60px' }}
             variants={staggerContainer}
-            className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
-            {ACADEMY_CONTENT.courses.map((course) => (
+            {ACADEMY_CONTENT.courses.map((course, index) => (
               <motion.div key={course.title} variants={fadeInUpVariants}>
-                <GlassCard className="flex h-full flex-col">
-                  <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl md:text-display-md">
+                <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-white/5 to-transparent p-8 transition-all duration-500 hover:border-axm-blue/30 hover:shadow-[0_0_40px_rgba(0,117,240,0.08)]">
+                  {/* Número de curso */}
+                  <span className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-axm-blue/20 bg-axm-blue/10 font-mono text-sm font-bold text-axm-blue">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  {/* Línea decorativa superior */}
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-axm-blue/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl">
                     {course.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-body-md text-axm-gray">{course.description}</p>
-                  <Button variant="secondary" size="sm" className="mt-6 w-fit">
-                    {course.cta}
-                  </Button>
-                </GlassCard>
+                  <p className="mt-3 flex-1 text-body-md leading-relaxed text-axm-gray">
+                    {course.description}
+                  </p>
+                  <div className="mt-8 flex items-center gap-3">
+                    <Button variant="secondary" size="sm" className="w-fit">
+                      {course.cta}
+                    </Button>
+                    <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
+                  </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>

@@ -2,11 +2,11 @@
 
 La carpeta raíz oficial del proyecto es:
 
-/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/
+/home/gatdesarrollo/Documentos/Website GAT/
 
 Los documentos maestros oficiales están en:
 
-/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Documentos Maestros/
+/home/gatdesarrollo/Documentos/Website GAT/Documentos Maestros/
 
 Todos los archivos .md deben tomarse como:
 

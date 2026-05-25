@@ -5,7 +5,7 @@
 ## Ruta Local Oficial
 
 ```txt
-/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/
+/home/gatdesarrollo/Documentos/Website GAT/
 ```
 
 ---
@@ -139,7 +139,7 @@ Website GAT/
 ## Alexandro — Imágenes para avatar 3D
 
 ```txt
-/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Alexandro Imagenes/
+/home/gatdesarrollo/Documentos/Website GAT/Alexandro Imagenes/
 ```
 
 Contiene referencias visuales de Alexandro para construcción del avatar holográfico 3D (imágenes, poster y recursos de apoyo). **Gitignored** — pendiente limpiar del `.gitignore`.
@@ -147,7 +147,7 @@ Contiene referencias visuales de Alexandro para construcción del avatar hologr�
 ## Grupo AXM Technology — Identidad visual
 
 ```txt
-/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/Grupo AXM Logo/
+/home/gatdesarrollo/Documentos/Website GAT/Grupo AXM Logo/
 ```
 
 Contiene la identidad visual oficial: logotipos, tipografías, brand guide y assets en formatos AI, Avatar, CDR, EPS, JPG, PDF, PNG, PSD y SVG. **Gitignored** — pendiente limpiar del `.gitignore`.
@@ -155,8 +155,8 @@ Contiene la identidad visual oficial: logotipos, tipografías, brand guide y ass
 ## Assets públicos desplegados
 
 ```txt
-/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/public/alexandro/
-/media/nas_local/Proyectos Grupo AXM Technology/Website GAT/public/logo/
+/home/gatdesarrollo/Documentos/Website GAT/public/alexandro/
+/home/gatdesarrollo/Documentos/Website GAT/public/logo/
 ```
 
 Assets optimizados para producción en `grupoaxmtechnology.com`.
