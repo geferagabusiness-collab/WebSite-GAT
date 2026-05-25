@@ -1,6 +1,6 @@
 'use client'
 
-import { GradientText } from '@/components/ui/GradientText'
+import { CircuitBackground } from '@/components/ui/CircuitBackground'
 import { PageBackground } from '@/components/ui/PageBackground'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { ServiceCardReveal } from '@/components/ui/ServiceCardReveal'
@@ -10,9 +10,10 @@ import { motion } from 'framer-motion'
 
 export default function ServiciosPage() {
   return (
-    <>
+    <div className="relative min-h-screen bg-axm-deep overflow-hidden">
+      <CircuitBackground />
       <PageBackground variant="servicios" />
-      <section className="relative z-10 section-padding bg-axm-deep">
+      <section className="relative z-10 section-padding">
       <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
         <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-10 sm:mb-16">
           <SectionTitle
@@ -39,12 +40,20 @@ export default function ServiciosPage() {
                   {service.subservices.map((sub) => (
                     <li
                       key={sub.title}
-                      className="rounded-lg border border-white/6 bg-axm-surface/30 p-5"
+                      className="group relative overflow-hidden rounded-xl border border-white/8 bg-gradient-to-br from-white/[0.04] to-transparent p-5 transition-all duration-300 hover:border-axm-blue/25 hover:from-axm-blue/[0.06]"
                     >
-                      <GradientText as="h3" className="text-body-lg font-semibold">
+                      <div
+                        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        style={{ backgroundImage: `linear-gradient(to right, transparent, ${service.color}, transparent)` }}
+                      />
+                      <div
+                        className="mb-3 h-0.5 w-8 rounded-full transition-all duration-300 group-hover:w-12"
+                        style={{ backgroundColor: service.color }}
+                      />
+                      <h3 className="text-body-lg font-semibold text-axm-white">
                         {sub.title}
-                      </GradientText>
-                      <p className="mt-2 text-body-sm text-axm-gray">{sub.description}</p>
+                      </h3>
+                      <p className="mt-2 text-body-sm leading-relaxed text-axm-gray">{sub.description}</p>
                     </li>
                   ))}
                 </ul>
@@ -53,6 +62,6 @@ export default function ServiciosPage() {
         </div>
       </div>
     </section>
-    </>
+    </div>
   )
 }

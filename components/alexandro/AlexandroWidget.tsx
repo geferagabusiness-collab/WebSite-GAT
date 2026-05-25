@@ -1,6 +1,12 @@
 'use client'
 
 import { ALEXANDRO_OPEN_EVENT } from '@/lib/alexandro'
+import {
+  askAlexandro,
+  formatBotReply,
+  stripHtml,
+  type AlexandroHistoryItem,
+} from '@/lib/alexandro-chat'
 import { getResponsiveCount } from '@/lib/responsive'
 import { useState, useEffect, useRef } from 'react'
 
@@ -8,20 +14,8 @@ function timestamp() {
   return new Date().toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' })
 }
 
-const REPLIES: Record<string, string> = {
-  demo: 'Con gusto. ¿Para qué área te interesa la demo: ventas, operaciones o servicio al cliente?',
-  integr: 'Me conecto con CRM, ERP, WhatsApp Business, Teams, Notion y +180 servicios vía API.',
-  humano: 'Listo, te canalizo con un ejecutivo. ¿Prefieres que te llamen o un chat con un humano ahora?',
-  default: 'Recibido. Estoy procesando tu consulta y te respondo en un momento.',
-}
-
-function pickReply(q: string): string {
-  const s = q.toLowerCase()
-  if (s.includes('demo')) return REPLIES.demo
-  if (s.includes('integr')) return REPLIES.integr
-  if (s.includes('humano') || s.includes('persona')) return REPLIES.humano
-  return REPLIES.default
-}
+const FALLBACK_REPLY =
+  'No pude conectar con mi núcleo de IA en este momento. Revisa que el backend esté activo o usa Contactar para hablar con el equipo.'
 
 interface Message {
   id: number
@@ -97,35 +91,53 @@ export function AlexandroWidget() {
     if (stage) stage.classList.remove('open')
   }
 
+  function toHistory(msgs: Message[]): AlexandroHistoryItem[] {
+    return msgs.map((m) => ({
+      role: m.who === 'user' ? 'user' : 'model',
+      content: stripHtml(m.text),
+    }))
+  }
+
+  async function replyToUser(userText: string, historyBefore: Message[]) {
+    setIsTyping(true)
+    try {
+      const reply = await askAlexandro(userText, toHistory(historyBefore))
+      const botMsg: Message = {
+        id: nextId.current++,
+        text: formatBotReply(reply),
+        who: 'bot',
+        time: timestamp(),
+      }
+      setMessages((prev) => [...prev, botMsg])
+    } catch {
+      const botMsg: Message = {
+        id: nextId.current++,
+        text: formatBotReply(FALLBACK_REPLY),
+        who: 'bot',
+        time: timestamp(),
+      }
+      setMessages((prev) => [...prev, botMsg])
+    } finally {
+      setIsTyping(false)
+    }
+  }
+
   function sendMessage() {
     const v = inputVal.trim()
-    if (!v) return
+    if (!v || isTyping) return
     const userMsg: Message = { id: nextId.current++, text: v, who: 'user', time: timestamp() }
     setMessages((prev) => [...prev, userMsg])
     setInputVal('')
-    setIsTyping(true)
-    setTimeout(() => {
-      setIsTyping(false)
-      const botMsg: Message = { id: nextId.current++, text: pickReply(v), who: 'bot', time: timestamp() }
-      setMessages((prev) => [...prev, botMsg])
-    }, 900 + Math.random() * 500)
+    void replyToUser(v, messages)
   }
 
   function handleChip(text: string) {
-    setInputVal(text)
-    setTimeout(() => {
-      const v = text.trim()
-      if (!v) return
-      const userMsg: Message = { id: nextId.current++, text: v, who: 'user', time: timestamp() }
-      setMessages((prev) => [...prev, userMsg])
-      setInputVal('')
-      setIsTyping(true)
-      setTimeout(() => {
-        setIsTyping(false)
-        const botMsg: Message = { id: nextId.current++, text: pickReply(v), who: 'bot', time: timestamp() }
-        setMessages((prev) => [...prev, botMsg])
-      }, 900 + Math.random() * 500)
-    }, 50)
+    const v = text.trim()
+    if (!v || isTyping) return
+    const userMsg: Message = { id: nextId.current++, text: v, who: 'user', time: timestamp() }
+    setMessages((prev) => [...prev, userMsg])
+    setInputVal('')
+    void replyToUser(v, messages)
   }
 
   // Abrir desde otras páginas (p. ej. /alexandro)
