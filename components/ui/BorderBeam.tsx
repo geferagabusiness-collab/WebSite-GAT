@@ -15,8 +15,9 @@ export function BorderBeam({ duration = 2000 }: BorderBeamProps) {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
+    const context = canvas.getContext('2d')
+    if (!context) return
+    const ctx: CanvasRenderingContext2D = context
 
     canvas.width = canvas.offsetWidth
     canvas.height = canvas.offsetHeight
