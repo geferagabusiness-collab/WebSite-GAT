@@ -31,8 +31,8 @@ export default function AcademyPage() {
       <WarpBackground />
       <PageBackground variant="academy" />
       <div className="relative z-10">
-      <section className="section-padding">
-        <div className="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+      <section className="section-padding overflow-visible">
+        <div className="mx-auto max-w-container overflow-visible px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <motion.div initial="initial" animate="animate" variants={fadeInUpVariants} className="mb-10 sm:mb-16">
             <SectionTitle
               title={ACADEMY_CONTENT.title}
@@ -42,34 +42,67 @@ export default function AcademyPage() {
             />
           </motion.div>
 
+          <style>{`
+            @keyframes electric-title {
+              0%   { color: #00ff88; }
+              25%  { color: #00f0ff; }
+              50%  { color: #39ff14; }
+              75%  { color: #00ffc8; }
+              100% { color: #00ff88; }
+            }
+            .electric-title {
+              animation: electric-title 4s ease-in-out infinite;
+            }
+          `}</style>
+
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: '-60px' }}
             variants={staggerContainer}
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="relative grid gap-6 overflow-visible md:grid-cols-2 lg:grid-cols-3"
+            style={{ perspective: '1400px' }}
           >
             {ACADEMY_CONTENT.courses.map((course, index) => (
-              <motion.div key={course.title} variants={fadeInUpVariants}>
-                <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-white/5 to-transparent p-8 transition-all duration-500 hover:border-axm-blue/30 hover:shadow-[0_0_40px_rgba(0,117,240,0.08)]">
-                  {/* Número de curso */}
-                  <span className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-axm-blue/20 bg-axm-blue/10 font-mono text-sm font-bold text-axm-blue">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  {/* Línea decorativa superior */}
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-axm-blue/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <h3 className="font-display text-xl font-semibold text-axm-white sm:text-2xl">
-                    {course.title}
-                  </h3>
-                  <p className="mt-3 flex-1 text-body-md leading-relaxed text-axm-gray">
-                    {course.description}
-                  </p>
-                  <div className="mt-8 flex items-center gap-3">
-                    <Button variant="secondary" size="sm" className="w-fit">
-                      {course.cta}
-                    </Button>
-                    <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
-                  </div>
+              <motion.div
+                key={course.title}
+                variants={fadeInUpVariants}
+                whileHover={{
+                  scale: 1.5,
+                  y: -24,
+                  zIndex: 40,
+                  transition: { duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] },
+                }}
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl cursor-pointer border border-white/15 bg-white/[0.07] p-8 shadow-lg transition-colors duration-300 hover:border-white/60 hover:bg-white hover:shadow-[0_48px_120px_rgba(0,0,0,0.55)]"
+                style={{ transformOrigin: 'center center' }}
+              >
+                {/* Número */}
+                <span className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/10 font-mono text-sm font-bold text-white/60 transition-colors duration-300 group-hover:border-axm-blue/20 group-hover:bg-axm-blue/5 group-hover:text-axm-gray">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                {/* Título animado — sin cambio de color al hover */}
+                <h3
+                  className="electric-title font-display text-xl font-bold sm:text-2xl"
+                  style={{ animationDelay: `${index * 0.6}s` }}
+                >
+                  {course.title}
+                </h3>
+
+                {/* Descripción: blanco → azul al hover para contraste sobre fondo blanco */}
+                <p className="mt-3 flex-1 text-body-md leading-relaxed text-white/85 transition-colors duration-300 group-hover:text-axm-blue">
+                  {course.description}
+                </p>
+
+                <div className="mt-8 flex items-center gap-3">
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    className="w-fit border-axm-blue/50 text-axm-cyan group-hover:border-axm-blue group-hover:bg-axm-blue group-hover:text-white group-hover:shadow-[0_4px_20px_rgba(0,117,240,0.35)]"
+                  >
+                    {course.cta}
+                  </Button>
+                  <div className="h-px flex-1 bg-gradient-to-r from-white/15 to-transparent transition-colors duration-300 group-hover:from-axm-blue/25" />
                 </div>
               </motion.div>
             ))}

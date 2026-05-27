@@ -59,13 +59,14 @@ export default function SoportePage() {
                     <label htmlFor="area" className="mb-1.5 block text-body-sm text-axm-gray">
                       Área
                     </label>
-                    <select id="area" name="area" required className={inputClass}>
-                      {SOPORTE_CONTENT.ticket.areas.map((area) => (
-                        <option key={area} value={area}>
-                          {area}
-                        </option>
-                      ))}
-                    </select>
+                    <input
+                      id="area"
+                      name="area"
+                      type="text"
+                      required
+                      placeholder="Ej: Sistemas, Administración..."
+                      className={inputClass}
+                    />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
@@ -77,6 +78,19 @@ export default function SoportePage() {
                     name="colaborador"
                     type="text"
                     required
+                    className={inputClass}
+                  />
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="email" className="mb-1.5 block text-body-sm text-axm-gray">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="correo@empresa.com"
                     className={inputClass}
                   />
                 </div>

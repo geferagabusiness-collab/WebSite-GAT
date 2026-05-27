@@ -360,10 +360,36 @@ export const PRODUCTOS_CONTENT = {
 } as const
 
 export const ALEXANDRO_PAGE_CONTENT = {
-  title: 'Alexandro',
   badge: 'Gerente Operativo IA',
   headline: 'Alexandro',
   description:
-    'Alexandro es un gerente operativo potenciado por inteligencia artificial, diseñado para optimizar procesos, automatizar operaciones y apoyar la toma de decisiones empresariales.',
-  cta: 'Conocer Alexandro',
+    'Alexandro es un gerente operativo digital y autónomo potenciado por inteligencia artificial, diseñado para convertirse en el núcleo estratégico y motor de ejecución de empresas modernas.',
+  cta: 'Conozca Alexandro IA',
+  ctaHref: 'https://alexandro.app',
+  pillars: [
+    {
+      id: 'ejecucion',
+      label: 'Ejecución y Lógica',
+      title: 'Capacidad de Ejecución y Lógica Empresarial',
+      body: 'Interpreta conversaciones, comprende el contexto profundo del negocio, aprende patrones de comportamiento y toma decisiones autónomas para agilizar la carga organizacional.',
+    },
+    {
+      id: 'omnicanalidad',
+      label: 'Omnicanalidad',
+      title: 'Omnicanalidad Inteligente',
+      body: 'Ecosistema de comunicación integrado que opera con fluidez en WhatsApp, Telegram, Llamadas de Voz, Portal Web y futuros ecosistemas digitales.',
+    },
+    {
+      id: 'motor',
+      label: 'Motor Comercial',
+      title: 'Motor Comercial y Operativo Multi-Flujo',
+      body: 'Actúa simultáneamente como vendedor virtual, calificador de leads, gestor de citas y soporte técnico, conectándose en tiempo real con CRMs, ERPs, catálogos y bases de datos.',
+    },
+    {
+      id: 'arquitectura',
+      label: 'Arquitectura',
+      title: 'Arquitectura Multi-Tenant y Escalable',
+      body: 'Diseñado desde un enfoque desacoplado y orientado a runtimes inteligentes, opera de forma masiva, aislada y segura para múltiples empresas simultáneamente.',
+    },
+  ],
 } as const
